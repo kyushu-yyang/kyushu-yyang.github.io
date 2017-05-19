@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Radiation Estimation &#8212; comet 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Degradation of Thermal Conduction" href="thermal.html" />
+    <link rel="prev" title="Research Memo" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">comet 1.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Research Memo"
+             accesskey="P">previous</a> |
+          <a href="thermal.html" title="2. Degradation of Thermal Conduction"
+             accesskey="N">next</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="radiation-estimation">
+<h1>1. Radiation Estimation<a class="headerlink" href="#radiation-estimation" title="Permalink to this headline">¶</a></h1>
+<p>To design a superconducting coil under the high radiation environment safely, the simulation of radiation is necessary.
+From the concept design of COMET pion capture solenoid, the neutron fluence (<span class="math">\(E_{n}\)</span>&gt;0.1 MeV) is estimated roughly around the order of <span class="math">\(10^{21} n/m^2\)</span> for <span class="math">\(10^{21}\)</span> POT.
+However, the neutron fluence of the order of <span class="math">\(10^{21} n/m^2\)</span>, in fact, is not an ignorable number for designing a superconducting magnet at high radiation environment, because the coil temperature may be increased due to the degradation, which leads to magnet quench as the consequence.</p>
+<p>In this section, the radiation for COMET pion capture solenoid is investigated in detail.</p>
+<div class="section" id="introduction">
+<h2>1.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The Monte Carlo code: <code class="docutils literal"><span class="pre">PHITS</span></code> is used for the radiation estimation.
+The goal for the simulation is listed as follows.</p>
+<ul class="simple">
+<li>Investigating the peak of <strong>Neutron Fluence</strong>, <strong>Energy Deposit</strong> and <strong>Displacement Per Atom (DPA)</strong> at superconducting coil, which are related to the radiation damage of material.</li>
+<li>Producing the map of these three parameters for the thermal conduction simulation of each coil, which will be described in next section.</li>
+<li>Calculating the total heat load of pion capture solenoid system for the cryogenics system design.</li>
+<li>Estimating the residual radiation after beamline operation to check if the maintenance is possible or not.</li>
+</ul>
+</div>
+<div class="section" id="modeling">
+<h2>1.2. Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
+<p>The model in PHITS simulation is shown in figure <a class="reference internal" href="#dgeo"><span class="std std-numref">Fig. 1.1</span></a>.</p>
+<div class="figure align-center" id="dgeo">
+<a class="reference internal image-reference" href="_images/Geo_All3d.png"><img alt="_images/Geo_All3d.png" src="_images/Geo_All3d.png" style="width: 613.9px; height: 433.65px;" /></a>
+</div>
+</div>
+<div class="section" id="total-heat-generation-from-the-energy-deposition">
+<h2>1.3. Total Heat Generation from the energy deposition<a class="headerlink" href="#total-heat-generation-from-the-energy-deposition" title="Permalink to this headline">¶</a></h2>
+<p>The estimated energy deposition for Capture solenoid system:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Coil</th>
+<th class="head">Energy Deposition [W]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CS0~TS1f</td>
+<td>166.36 <span class="math">\(\pm\)</span> 12.90</td>
+</tr>
+<tr class="row-odd"><td>Shell</td>
+<td>57.20 <span class="math">\(\pm\)</span> 0.92</td>
+</tr>
+<tr class="row-even"><td>Total</td>
+<td>223.56 <span class="math">\(\pm\)</span> 12.93</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Radiation Estimation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modeling">1.2. Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#total-heat-generation-from-the-energy-deposition">1.3. Total Heat Generation from the energy deposition</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thermal.html">2. Degradation of Thermal Conduction</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Research Memo"
+              >previous</a> |
+            <a href="thermal.html" title="2. Degradation of Thermal Conduction"
+              >next</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/radiation.rst.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Y.Yang.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

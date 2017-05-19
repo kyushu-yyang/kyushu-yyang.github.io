@@ -1,0 +1,47 @@
+=====================
+Radiation Estimation
+=====================
+To design a superconducting coil under the high radiation environment safely, the simulation of radiation is necessary.
+From the concept design of COMET pion capture solenoid, the neutron fluence (:math:`E_{n}`>0.1 MeV) is estimated roughly around the order of :math:`10^{21} n/m^2` for :math:`10^{21}` POT.
+However, the neutron fluence of the order of :math:`10^{21} n/m^2`, in fact, is not an ignorable number for designing a superconducting magnet at high radiation environment, because the coil temperature may be increased due to the degradation, which leads to magnet quench as the consequence.
+
+In this section, the radiation for COMET pion capture solenoid is investigated in detail.
+
+Introduction
+-------------
+The Monte Carlo code: ``PHITS`` is used for the radiation estimation.
+The goal for the simulation is listed as follows.
+
+* Investigating the peak of **Neutron Fluence**, **Energy Deposit** and **Displacement Per Atom (DPA)** at superconducting coil, which are related to the radiation damage of material.
+* Producing the map of these three parameters for the thermal conduction simulation of each coil, which will be described in next section.
+* Calculating the total heat load of pion capture solenoid system for the cryogenics system design.
+* Estimating the residual radiation after beamline operation to check if the maintenance is possible or not.
+
+
+Modeling
+-------------
+The model in PHITS simulation is shown in figure :numref:`3dgeo`.
+
+.. figure:: ../figure/radiation/Geo_All3d.png
+   :name: 3dgeo
+   :align: center
+   :scale: 35%
+
+
+
+
+
+Total Heat Generation from the energy deposition
+-------------------------------------------------
+The estimated energy deposition for Capture solenoid system:
+
+==========  ==============================
+ Coil        Energy Deposition [W]
+==========  ==============================
+ CS0~TS1f    166.36 :math:`\pm` 12.90     
+ Shell       57.20 :math:`\pm` 0.92 
+----------  ------------------------------
+ Total       223.56 :math:`\pm` 12.93
+==========  ==============================
+
+
