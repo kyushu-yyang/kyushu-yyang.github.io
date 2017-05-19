@@ -50,6 +50,49 @@
             
   <div class="section" id="degradation-of-thermal-conduction">
 <h1>2. Degradation of Thermal Conduction<a class="headerlink" href="#degradation-of-thermal-conduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="radiation-map">
+<h2>2.1. Radiation Map<a class="headerlink" href="#radiation-map" title="Permalink to this headline">¶</a></h2>
+<p>The thermal conduction analysis is calculated with the input of both neutron fluence and energy deposit map from the Monte Carlo simulation.
+The maps are interpolated into the thermal conduction with the cell&#8217;s coordinate.
+Figure as follows shows the heat generation of CS1 coil calculated from a simple geometry (right) and realistic geometry (left) after interpolation.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="_images/new_dose.png"><img alt="new" src="_images/new_dose.png" style="width: 484.5px; height: 210.5px;" /></a></td>
+<td><a class="reference internal" href="_images/old_dose.png"><img alt="old" src="_images/old_dose.png" style="width: 484.5px; height: 210.5px;" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>Compared the older simulation for pion capture solenoid, which is only implemented the radiation shielding and coil, although, the newest result gives few higher peak energy deposit, the total heat load increases.
+The thermal conduction simulation has been done to confirm the difference of the radiation map can affect the coil temperature or not.
+The figure <a class="reference internal" href="#diffmc"><span class="std std-numref">Fig. 2.1</span></a> shows the result, and the maximum temperature when uses the radiation input of realistic model grows up to 7 K at 90 day operation.
+Apparently, the radiation map calculated from the realistic model must be chosen for the thermal conduction simulation.</p>
+<div class="figure" id="diffmc">
+<a class="reference internal image-reference" href="_images/diffMCinput.png"><img alt="_images/diffMCinput.png" src="_images/diffMCinput.png" style="width: 354.3px; height: 237.9px;" /></a>
+</div>
+<div class="section" id="radiation-map-for-the-thermal-analysis">
+<h3>2.1.1. Radiation Map for the Thermal Analysis<a class="headerlink" href="#radiation-map-for-the-thermal-analysis" title="Permalink to this headline">¶</a></h3>
+<p>From the study of the radiation map, we conclude the map calculated realistic model must be used for the thermal analysis.
+Considering the map used for the previous study has rough mesh, in the figure, both of the neutron and energy deposit map are optimized to the mesh of 20 <span class="math">\(\times\)</span> 4 <span class="math">\(\times\)</span> 9 along the Z, <span class="math">\(\phi\)</span> and R, respectivelty.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="_images/phits288Flux2d_z20p9r4.png"><img alt="flux_fine" src="_images/phits288Flux2d_z20p9r4.png" style="width: 472.4px; height: 287.2px;" /></a></td>
+<td><a class="reference internal" href="_images/phits288Dose2d_z20p9r4.png"><img alt="dose_fine" src="_images/phits288Dose2d_z20p9r4.png" style="width: 472.4px; height: 287.2px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="effects-of-the-al-strip">
+<h2>2.2. Effects of the Al strip<a class="headerlink" href="#effects-of-the-al-strip" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -58,6 +101,18 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Degradation of Thermal Conduction</a><ul>
+<li><a class="reference internal" href="#radiation-map">2.1. Radiation Map</a><ul>
+<li><a class="reference internal" href="#radiation-map-for-the-thermal-analysis">2.1.1. Radiation Map for the Thermal Analysis</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#effects-of-the-al-strip">2.2. Effects of the Al strip</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="radiation.html"
                         title="previous chapter">1. Radiation Estimation</a></p>
